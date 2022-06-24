@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  margin: 0;
+}
+
+#headline-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 10% 5%;
+
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
+#headline-text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10vh;
+  text-align: center;
+
+  /* color: #FFFFFF;
+  border: 2px solid #000000; */
+
+  color: #000000;
+  -webkit-text-fill-color: #FFFFFF;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
+
+  min-height: 60%;
+  padding-bottom: 10vh;
+}
+
+#headline-text>span {
+  -webkit-text-fill-color: #000000;
+  /* Will override color (regardless of order) */
+}
+
+.next-triangle-button {
+  width: 0;
+  height: 0;
+  border-left: 2vh solid transparent;
+  border-right: 2vh solid transparent;
+
+  border-top: 3vh solid #BCFF2F;
+}
+
+.next-triangle-button.down {
+  transform: rotate(-180deg);
+}
+
+#data-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
+  top: 0;
+  left: 0;
+
+  height: 99vh;
+  width: 100%;
+
+  position: fixed;
+  z-index: 2;
+  top: 0;
+}
+
+.black-circle {
+  border-radius: 50%;
+  width: 200vh;
+  height: 200vh;
+  background-color: #000000;
+
+  position: absolute;
+}
+
+#scrolling-background {
+  width: 100%;
+  height: 300vh;
+  z-index: -999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3% 0;
+}
+
+.anchor {
+  height: 5%;
+  width: 100%;
+}

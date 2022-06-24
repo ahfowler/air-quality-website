@@ -1,26 +1,19 @@
 {
-  "name": "WebRTC-Example",
-  "version": "1.0.0",
-  "description": "An 'as simple as it gets' WebRTC example.",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shanet/WebRTC-Example.git"
-  },
-  "keywords": [
-    "webrtc"
-  ],
-  "author": "shane tully",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/shanet/WebRTC-Example/issues"
-  },
-  "homepage": "https://github.com/shanet/WebRTC-Example#readme",
-  "dependencies": {
-    "ws": "^3.3.2"
-  }
+    "title": "air-quality-website",
+    "name": "air-quality-website",
+    "version": "0.0.1",
+    "description": "The website for ASU's air quality project.",
+    "dependencies": {
+        "bootstrap": "4.0.0",
+        "devicons": "^1.8.0",
+        "errorhandler": "^1.5.1",
+        "express": "^4.18.1",
+        "handler": "^0.1.3",
+        "jquery": "3.3.1",
+        "method-override": "^3.0.0",
+        "simple-line-icons": "^2.4.1"
+    },
+    "devDependencies": {
+        "browser-sync": "2.23.6"
+    }
 }
