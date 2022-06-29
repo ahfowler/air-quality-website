@@ -38,3 +38,20 @@ typewriter();
 
 // -----------
 
+ROLE = 'viewer';
+
+const localView = $('#viewer .local-view')[0];
+const remoteView = $('#viewer .remote-view')[0];
+const localMessage = $('#viewer .local-message')[0];
+const remoteMessage = $('#viewer .remote-message')[0];
+
+$(remoteMessage).empty();
+localMessage.value = '';
+
+function onStatsReport(report) {
+  // TODO: Publish stats
+}
+
+startViewer(localView, remoteView, onStatsReport, event => {
+  remoteMessage.append(`${event.data}\n`);
+});

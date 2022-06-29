@@ -14,6 +14,10 @@
   <link href="css/index.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/amazon-kinesis-video-streams-webrtc/dist/kvs-webrtc.min.js"></script>
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.585.0.min.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -35,10 +39,43 @@
   <div id="data-section" data-aos="zoom-in" data-aos-anchor="#data-section-anc" data-aos-anchor-placement="bottom-left">
     <div class="black-circle">
       <div id="data-graph"></div>
+      <div id="viewer" class="d-none">
+        <h2>Viewer</h2>
+        <div class="row">
+          <div class="col">
+            <h5>Return Channel</h5>
+            <div class="video-container"><video class="local-view" autoplay playsinline controls muted /></div>
+          </div>
+          <div class="col">
+            <h5>From Master</h5>
+            <div class="video-container"><video class="remote-view" autoplay playsinline controls /></div>
+          </div>
+        </div>
+        <div class="row datachannel">
+          <div class="col">
+            <div class="form-group">
+              <textarea type="text" class="form-control local-message" placeholder="DataChannel Message"> </textarea>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card bg-light mb-3">
+              <pre class="remote-message card-body text-monospace preserve-whitespace"></pre>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="send-message datachannel" class="d-none">
+            <button type="button" class="btn btn-primary">Send DataChannel Message</button>
+          </span>
+          <button id="stop-viewer-button" type="button" class="btn btn-primary">Stop Viewer</button>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- Custom scripts for this template -->
+  <script src="js/viewer.js"></script>
+  <script src="js/createSignalingChannel.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="js/index.js"></script>
   <script>
