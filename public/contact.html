@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Contact</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+    <link href="css/hamburger-to-close.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body id="page-top">
+
+    <div id="side-menu" class="">
+        <div id="side-menu-button">
+            <div id="nav-icon4">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div id="side-menu-contents">
+            <div id="white-container">
+                <p>The Air Around Us presents</p>
+                <div id="museum-links">
+                    <div id="smca-nav-link" class="museum-link">Scottsdale Museum of Contemporary Art</div>
+                    <div id="idea-nav-link" class="museum-link">The i.d.e.a Museum</div>
+                    <div id="saggal-nav-link" class="museum-link">The Sagrado Galleria</div>
+                </div>
+                <div id="misc-links">
+                    <div id="home-link" class="misc-link" onclick="location.href = '/'">Home</div>
+                    <div id="about-link" class="misc-link" onclick="location.href = '/about.html'">About</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-section" class="section">
+        mrberns2@asu.edu for details
+    </div>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/index.js"></script>
+    <script>
+        let menuOpen = true;
+
+        $(document).ready(function () {
+            $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function () {
+                $(this).toggleClass('open');
+                if (!menuOpen) {
+                    $("#side-menu-contents").animate({ opacity: "0" }, 500);
+                    $("#white-container").animate({ right: "-50vw" }, 500);
+                    menuOpen = true;
+                } else {
+                    $("#side-menu-contents").animate({ opacity: "100%" }, 500);
+                    $("#white-container").animate({ right: "0" }, 500);
+                    menuOpen = false;
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

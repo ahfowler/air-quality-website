@@ -1,8 +1,8 @@
 // Typewriter Effect: https://codepen.io/gavra/pen/nNRvKX
 var aText = new Array(
-  "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <span>aliquip ex ea commodo consequat</span>."
+  "Funded by ASU’s Herberger Institute for Design and the Arts, <span>The Air Around Us (TAAU)</span> is an arts and engineering initiative, which aspires to increase the visibility of poor air quality conditions across the Phoenix metropolitan area."
 );
-var iSpeed = 100; // time delay of print out
+var iSpeed = 70; // time delay of print out
 var iIndex = 0; // start printing array at this posision
 var iArrLength = aText[0].length; // the length of the text array
 var iScrollAt = 20; // start scrolling up at this many lines
@@ -25,11 +25,11 @@ function typewriter() {
     iIndex++;
     if (iIndex != aText.length) {
       iArrLength = aText[iIndex].length;
-      iSpeed = Math.random() * 230;
+      iSpeed = Math.random() * 90;
       setTimeout("typewriter()", iSpeed);
     }
   } else {
-    iSpeed = Math.random() * 230;
+    iSpeed = Math.random() * 90;
     setTimeout("typewriter()", iSpeed);
   }
 }
@@ -37,21 +37,3 @@ function typewriter() {
 typewriter();
 
 // -----------
-
-ROLE = 'viewer';
-
-const localView = $('#viewer .local-view')[0];
-const remoteView = $('#viewer .remote-view')[0];
-const localMessage = $('#viewer .local-message')[0];
-const remoteMessage = $('#viewer .remote-message')[0];
-
-$(remoteMessage).empty();
-localMessage.value = '';
-
-function onStatsReport(report) {
-  // TODO: Publish stats
-}
-
-startViewer(localView, remoteView, onStatsReport, event => {
-  remoteMessage.append(`${event.data}\n`);
-});
